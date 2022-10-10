@@ -1,4 +1,4 @@
-resource "aws_iam_user" "lb" {
+resource "aws_iam_user" "john" {
   name = "john.doe"
   path = "/test/"
 
