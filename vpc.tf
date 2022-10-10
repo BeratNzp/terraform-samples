@@ -43,11 +43,6 @@ resource "aws_route_table" "new_vpc_public_route_table" {
     gateway_id = aws_internet_gateway.gw.id
   }
 
-  route {
-    ipv6_cidr_block        = "::/0"
-    egress_only_gateway_id = aws_egress_only_internet_gateway.example.id
-  }
-
   tags = {
     Name = "new_vpc_public_route_table"
   }
