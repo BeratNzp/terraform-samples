@@ -3,7 +3,7 @@ resource "aws_iam_user" "john" {
   path = "/test/"
 
   tags = {
-    tag-key = "Name-John",
-    tag-key = "Surname-Doe",
+    Name = "John",
+    Surname = "Doe",
   }
 }
