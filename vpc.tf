@@ -9,7 +9,7 @@ resource "aws_vpc" "new_vpc" {
 
 resource "aws_subnet" "eu-central-1a-public" {
   vpc_id     = aws_vpc.new_vpc.id
-  cidr_block = "10.10.10.0/24"
+  cidr_block = "10.0.10.0/24"
   availability_zone = "eu-central-1a"
 
   tags = {
@@ -19,7 +19,7 @@ resource "aws_subnet" "eu-central-1a-public" {
 
 resource "aws_subnet" "eu-central-1a-private" {
   vpc_id     = aws_vpc.new_vpc.id
-  cidr_block = "10.10.11.0/24"
+  cidr_block = "10.0.11.0/24"
   availability_zone = "eu-central-1a"
 
   tags = {
