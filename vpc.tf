@@ -44,7 +44,6 @@ resource "aws_route_table" "new_vpc_public_route_table" {
   }
   route {
     cidr_block = "10.0.0.0/16"
-    vpc_endpoint_id = aws_vpc.new_vpc.id
   }
 
   tags = {
