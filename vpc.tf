@@ -46,6 +46,11 @@ resource "aws_subnet" "eu-central-1a-public" {
   }
 }
 
+resource "aws_route_table_association" "aws_public_route_table_association_process" {
+  subnet_id      = aws_subnet.eu-central-1a-public.id
+  route_table_id = aws_route_table.new_vpc_public_route_table.id
+}
+
 resource "aws_subnet" "eu-central-1a-private" {
   vpc_id     = aws_vpc.new_vpc.id
   cidr_block = "10.0.11.0/24"
