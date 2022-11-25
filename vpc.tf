@@ -15,6 +15,14 @@ resource "aws_internet_gateway" "gw" {
   }
 }
 
+resource "aws_default_route_table" "new_vpc_default_route_table" {
+  default_route_table_id = aws_vpc.new_vpc.default_route_table_id
+
+  tags = {
+    Name = "new_vpc_private_route_table"
+  }
+}
+
 resource "aws_route_table" "new_vpc_public_route_table" {
   vpc_id = aws_vpc.new_vpc.id
 
