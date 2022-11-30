@@ -39,7 +39,7 @@ resource "aws_route_table" "new_vpc_public_route_table" {
 resource "aws_subnet" "eu_central_1a_public" {
   vpc_id     = aws_vpc.new_vpc.id
   cidr_block = "10.0.10.0/24"
-  availability_zone = "eu_central_1a"
+  availability_zone = "eu-central-1a"
 
   tags = {
     Name = "new_vpc_1a_public"
@@ -54,7 +54,7 @@ resource "aws_route_table_association" "aws_public_route_table_association_proce
 resource "aws_subnet" "eu_central_1a_private" {
   vpc_id     = aws_vpc.new_vpc.id
   cidr_block = "10.0.11.0/24"
-  availability_zone = "eu_central_1a"
+  availability_zone = "eu-central-1a"
 
   tags = {
     Name = "new_vpc_1a_private"
